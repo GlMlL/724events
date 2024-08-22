@@ -46,11 +46,11 @@ const Slider = () => {
           </div>
           <div className="SlideCard__paginationContainer">
             <div className="SlideCard__pagination">
-              {byDateDesc.map((value, radioIdx) => (
+              {byDateDesc.map((focus, radioIdx) => (
                 // Modification de la clé pour la rendre unique en combinant les titres des événements.
                 // Cela garantit que chaque entrée est correctement identifiée par React, ce qui évite les problèmes de rendu et d'optimisation.
                 <input
-                  key={`${event.title}.${value.title}`}
+                  key={focus.title}
                   type="radio"
                   name="radio-button"
                   checked={index === radioIdx}
