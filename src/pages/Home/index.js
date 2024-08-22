@@ -13,7 +13,14 @@ import Modal from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
 const Page = () => {
-  const { last } = useData();
+  const { data } = useData();
+  
+  // Trie les événements par date, du plus récent au plus ancien
+  const sortedEvents = data ? [...data.events].sort((a, b) => new Date(b.date) - new Date(a.date)) : [];
+  
+  // Sélectionne le premier événement (le plus récent) de la liste triée
+  const lastEvent = sortedEvents.length > 0 ? sortedEvents[0] : null;
+
   return (
     <>
       <header>
@@ -114,13 +121,15 @@ const Page = () => {
       <footer className="row">
         <div className="col presta">
           <h3>Notre dernière prestation</h3>
-          <EventCard
-            imageSrc={last?.cover}
-            title={last?.title}
-            date={new Date(last?.date)}
-            small
-            label="boom"
-          />
+          {lastEvent && (
+            <EventCard
+              imageSrc={lastEvent.cover}
+              title={lastEvent.title}
+              date={new Date(lastEvent.date)}
+              small
+              label={lastEvent.type}
+            />
+          )}
         </div>
         <div className="col contact">
           <h3>Contactez-nous</h3>
