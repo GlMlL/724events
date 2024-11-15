@@ -13,4 +13,6 @@ export const MONTHS = {
   12: "décembre",
 };
 
-export const getMonth = (date) => MONTHS[date.getMonth()];
+// J'ai ajouté +1 à la valeur de getMonth(), car getMonth() renvoie un index de 0 à 11 (0 pour janvier, 11 pour décembre).
+// En ajoutant +1, j'aligne cet index sur les clés de l'objet MONTHS, qui vont de 1 à 12.
+export const getMonth = (date) => MONTHS[date.getMonth() + 1];
