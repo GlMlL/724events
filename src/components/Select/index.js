@@ -16,9 +16,9 @@ const Select = ({
   const [value, setValue] = useState();
   const [collapsed, setCollapsed] = useState(true);
   const changeValue = (newValue) => {
-    onChange();
+    onChange(newValue);// Appelle la fonction onChange avec la nouvelle valeur sélectionnée, permettant au parent de réagir à ce changement.
     setValue(newValue);
-    setCollapsed(!collapsed);
+    setCollapsed(true);// newValue représente la valeur sélectionnée, un état booléen est attendu par setCollapsed.(ancien code:setCollapsed(newValue);)
   };
   return (
     <div className={`SelectContainer ${type}`} data-testid="select-testid">

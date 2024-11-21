@@ -5,11 +5,11 @@ import "./style.scss";
 
 const EventCard = ({
   imageSrc,
-  imageAlt = "image",  // Valeur par défaut pour imageAlt
-  date = new Date(),     // Valeur par défaut pour date
+  imageAlt,
+  date = new Date(),
   title,
   label,
-  small = false,         // Valeur par défaut pour small
+  small = false,
   ...props
 }) => (
     <div

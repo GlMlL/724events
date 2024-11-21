@@ -24,6 +24,7 @@ const Page = () => {
       setLastEvent(sortedEvents[0]); // Sélectionne le premier événement (le plus récent)
     }
   }, [data]); // Ce useEffect se déclenche à chaque fois que `data` change
+  
 
   return (
     <>
