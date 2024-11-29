@@ -10,10 +10,14 @@ const Slider = () => {
   const byDateDesc = data?.focus.sort((evtA, evtB) =>
     new Date(evtA.date) < new Date(evtB.date) ? -1 : 1
   )
-  // console.log('byDataDesc', byDateDesc)
+  // delais de 5s pour le défilement du slider
   const nextCard = () => {
     setTimeout(() => {
+      // ancien code
+      // (() => setIndex(index < byDateDesc.length ? index + 1 : 0))
       if (byDateDesc) {
+        // - Si l'index actuel (`index`) est inférieur au dernier index possible (`byDateDesc.length - 1`), on passe au slide suivant (index + 1)
+        // - Sinon, on revient au premier slide (index = 0)
         setIndex(index < byDateDesc.length - 1 ? index + 1 : 0)
       }
     }, 5000)

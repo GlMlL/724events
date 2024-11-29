@@ -1,6 +1,7 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import Home from "./index";
 
+
 // Début de notre suite de tests pour vérifier les fonctionnalités de la page "Home"
 describe("When Form is created", () => {
   // Ce test vérifie si, lorsque le formulaire est affiché, les champs nécessaires sont bien présents
@@ -39,7 +40,7 @@ describe("When Form is created", () => {
 
 // Nouvelle suite de tests pour vérifier que d'autres éléments de la page "Home" sont bien affichés
 describe("When a page is created", () => {
-  // Ce test vérifie si une liste d'événements (réalisations) est affichée
+  // 1 Ce test vérifie si une liste d'événements (réalisations) est affichée
   it("a list of events is displayed", async () => {
     // J'affiche le composant Home
     render(<Home />);
@@ -47,7 +48,7 @@ describe("When a page is created", () => {
     // Je récupère tous les éléments avec le texte "Nos réalisations"
     const eventHeadings = screen.getAllByText("Nos réalisations");
 
-    // Je vérifie qu'au moins un de ces éléments est un titre <H2>
+    // Je vérifie qu'au moins un de ces éléments est un titre <H2> pour garantir que la section est bien structurée
     expect(eventHeadings.some((el) => el.tagName === "H2")).toBe(true);
   });
 
@@ -66,9 +67,13 @@ describe("When a page is created", () => {
     expect(screen.getByText("Samira")).toBeInTheDocument();
     expect(screen.getByText("Jean-baptiste")).toBeInTheDocument();
     expect(screen.getByText("Alice")).toBeInTheDocument();
+    expect(screen.getByText("Luís")).toBeInTheDocument();
+    expect(screen.getByText("Christine")).toBeInTheDocument();
+    expect(screen.getByText("Isabelle")).toBeInTheDocument();
+
   });
 
-  // Ce test vérifie si le footerest affiché correctement
+  // 2 Ce test vérifie si le footer est correctement affiché 
   it("a footer is displayed", () => {
     // J'affiche à nouveau le composant Home
     render(<Home />);
@@ -94,3 +99,5 @@ describe("When a page is created", () => {
     expect(screen.getByText(/notre dernière prestation/i)).toBeInTheDocument();
   });
 });
+
+
