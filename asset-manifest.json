@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Projet10-Debuggez-le-site-d-une-agence-devenementiel/static/css/main.57c50e3b.css",
-    "main.js": "/Projet10-Debuggez-le-site-d-une-agence-devenementiel/static/js/main.ad25ef26.js",
-    "static/js/787.bd863a58.chunk.js": "/Projet10-Debuggez-le-site-d-une-agence-devenementiel/static/js/787.bd863a58.chunk.js",
-    "index.html": "/Projet10-Debuggez-le-site-d-une-agence-devenementiel/index.html",
-    "main.57c50e3b.css.map": "/Projet10-Debuggez-le-site-d-une-agence-devenementiel/static/css/main.57c50e3b.css.map",
-    "main.ad25ef26.js.map": "/Projet10-Debuggez-le-site-d-une-agence-devenementiel/static/js/main.ad25ef26.js.map",
-    "787.bd863a58.chunk.js.map": "/Projet10-Debuggez-le-site-d-une-agence-devenementiel/static/js/787.bd863a58.chunk.js.map"
+    "main.css": "/724events/static/css/main.57c50e3b.css",
+    "main.js": "/724events/static/js/main.2de660e8.js",
+    "static/js/787.bd863a58.chunk.js": "/724events/static/js/787.bd863a58.chunk.js",
+    "index.html": "/724events/index.html",
+    "main.57c50e3b.css.map": "/724events/static/css/main.57c50e3b.css.map",
+    "main.2de660e8.js.map": "/724events/static/js/main.2de660e8.js.map",
+    "787.bd863a58.chunk.js.map": "/724events/static/js/787.bd863a58.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.57c50e3b.css",
-    "static/js/main.ad25ef26.js"
+    "static/js/main.2de660e8.js"
   ]
 }
